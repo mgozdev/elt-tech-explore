@@ -1,0 +1,2653 @@
+<!doctype html>
+<html>
+<head>
+<title>NPORT_readme</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<div id="toc_container">
+<p class="toc_title">NPORT Data Sets</p>
+<ul class="toc_list">
+<li><a href="#Overview">1 Overview</a></li>
+<li><a href="#Scope">2 Scope</a></li>
+<li><a href="#Organization">3 Organization</a></li>
+<li><a href="#File Format">4 File Format</a></li>
+  <li><a href="#Table Definitions">5 Table Definitions</a>
+  <ul><li><a href="#SUBMISSION (Items A.3-4)">5.1 SUBMISSION (Items A.3-4)</a></li><li><a href="#REGISTRANT (Item A.1)">5.2 REGISTRANT (Item A.1)</a></li><li><a href="#FUND_REPORTED_INFO (Items A.2, B.1-B.6)">5.3 FUND_REPORTED_INFO (Items A.2, B.1-B.6)</a></li><li><a href="#INTEREST_RATE_RISK (Item B.3.a-b)">5.4 INTEREST_RATE_RISK (Item B.3.a-b)</a></li><li><a href="#BORROWER (Item B.4.a)">5.5 BORROWER (Item B.4.a)</a></li><li><a href="#BORROW_AGGREGATE (Item B.4.b)">5.6 BORROW_AGGREGATE (Item B.4.b)</a></li><li><a href="#MONTHLY_TOTAL_RETURN (Items B.5.a-b)">5.7 MONTHLY_TOTAL_RETURN (Items B.5.a-b)</a></li><li><a href="#MONTHLY_RETURN_CAT_INSTRUMENT (Item B.5.c)">5.8 MONTHLY_RETURN_CAT_INSTRUMENT (Item B.5.c)</a></li><li><a href="#FUND_VAR_INFO (Item B.10.b)">5.9 FUND_VAR_INFO (Item B.10.b)</a></li><li><a href="#FUND_REPORTED_HOLDING (Items C.1 - C.8, C.11)">5.10 FUND_REPORTED_HOLDING (Items C.1 - C.8, C.11)</a></li><li><a href="#IDENTIFIERS (Item C.1.e)">5.11 IDENTIFIERS (Item C.1.e)</a></li><li><a href="#DEBT_SECURITY (Item C.9)">5.12 DEBT_SECURITY (Item C.9)</a></li><li><a href="#DEBT_SECURITY_REF_INSTRUMENT (Item C.9.f.iii)">5.13 DEBT_SECURITY_REF_INSTRUMENT (Item C.9.f.iii)</a></li><li><a href="#CONVERTIBLE_SECURITY_CURRENCY (Item C.9.f.iv)">5.14 CONVERTIBLE_SECURITY_CURRENCY (Item C.9.f.iv)</a></li><li><a href="#REPURCHASE_AGREEMENT (Item C.10.a-e)">5.15 REPURCHASE_AGREEMENT (Item C.10.a-e)</a></li><li><a href="#REPURCHASE_COUNTERPARTY (Item C.10.b.ii)">5.16 REPURCHASE_COUNTERPARTY (Item C.10.b.ii)</a></li><li><a href="#REPURCHASE_COLLATERAL (Item C.10.f)">5.17 REPURCHASE_COLLATERAL (Item C.10.f)</a></li><li><a href="#DERIVATIVE_COUNTERPARTY (Item C.11.b.i)">5.18 DERIVATIVE_COUNTERPARTY (Item C.11.b.i)</a></li><li><a href="#SWAPTION_OPTION_WARNT_DERIV (Item C.11.c.i-ii, iv-vi, viii)">5.19 SWAPTION_OPTION_WARNT_DERIV (Item C.11.c.i-ii, iv-vi, viii)</a></li><li><a href="#DESC_REF_INDEX_BASKET (Item C.11.c.iii.2)">5.20 DESC_REF_INDEX_BASKET (Item C.11.c.iii.2)</a></li><li><a href="#DESC_REF_INDEX_COMPONENT (Item C.11.c.iii.2)">5.21 DESC_REF_INDEX_COMPONENT (Item C.11.c.iii.2)</a></li><li><a href="#DESC_REF_OTHER (Item C.11.c.iii.3)">5.22 DESC_REF_OTHER (Item C.11.c.iii.3)</a></li><li><a href="#FUT_FWD_NONFOREIGNCUR_CONTRACT (Item C.11.d)">5.23 FUT_FWD_NONFOREIGNCUR_CONTRACT (Item C.11.d)</a></li><li><a href="#FWD_FOREIGNCUR_CONTRACT_SWAP (Item C.11.e)">5.24 FWD_FOREIGNCUR_CONTRACT_SWAP (Item C.11.e)</a></li><li><a href="#NONFOREIGN_EXCHANGE_SWAP (Item C.11.f)">5.25 NONFOREIGN_EXCHANGE_SWAP (Item C.11.f)</a></li><li><a href="#FLOATING_RATE_RESET_TENOR (Item C.11.f.i)">5.26 FLOATING_RATE_RESET_TENOR (Item C.11.f.i)</a></li><li><a href="#OTHER_DERIV (Item C.11.g)">5.27 OTHER_DERIV (Item C.11.g)</a></li><li><a href="#OTHER_DERIV_NOTIONAL_AMOUNT (Item C.11.g.iii)">5.28 OTHER_DERIV_NOTIONAL_AMOUNT (Item C.11.g.iii)</a></li><li><a href="#SECURITIES_LENDING (Item C.12)">5.29 SECURITIES_LENDING (Item C.12)</a></li><li><a href="#EXPLANATORY_NOTE (Item E)">5.30 EXPLANATORY_NOTE (Item E)</a></li></ul>
+</li>
+</ul>
+</div>
+<h2 id="Overview">1. Overview</h2>
+Form N-PORT is used by registered investment companies and exchange-traded funds to report monthly portfolio holdings other than money market funds.  Form N-PORT filings are disseminated quarterly.  The NPORT Data Sets provides the portfolio holdings from the N-PORT filings that have been disseminated.  The NPORT Data Sets are extracted from Form N-PORT eXtensible Markup Language (XML) submissions in a flat file format to assist users in more easily constructing the data for analysis. These data sets includes any amendments to those submissions. The data has been automatically and directly taken from submissions created by the registrants and provided as-filed.  The data will be published quarterly. Data contained in documents filed after 5:30pm EST on the last business day of the quarter will be included in the next quarterly posting.
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>SUBMISSION TYPE</th>
+      <th>DESCRIPTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>N-PORT-P,
+	  NPORT-P/A</th>
+      <td>MONTHLY PORTFOLIO INVESTMENTS REPORT</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Scope">2. Scope</h2>
+The N-PORT data sets consists of XML data submitted from October 2019 through current period.<br>Note <a href="https://www.sec.gov/edgar/filer-information/current-edgar-technical-specifications">EDGAR Technical Specifications</a> provides information on Form N-PORT XML Technical Specifications Document.
+<h2 id="Organization">3. Organization</h2>
+Note that the data sets include information "as filed" in EDGAR document submissions including amendments of prior submissions. Data in this submitted form may contain redundancies, inconsistencies, and discrepancies relative to prior submissions and other publication formats.  There are up to 30 data files. Each quarterly data set is accompanied by a metadata file conforming to the W3C specification for tabular data (https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/) that encodes the following information about the data files and their relationships to each other<br>
+<p style="margin-left: 40px"> 1. <b>SUBMISSION</b> Contains information from the EDGAR submission, with each row having the primary key <b>ACCESSION_NUMBER</b>.</p><p style="margin-left: 40px"> 2. <b>REGISTRANT</b> Contains information about the registrant, with each row having the primary key <b>ACCESSION_NUMBER</b>.</p><p style="margin-left: 40px"> 3. <b>FUND_REPORTED_INFO</b> Contains information about the fund, with each row having the primary key <b>ACCESSION_NUMBER</b>.</p><p style="margin-left: 40px"> 4. <b>INTEREST_RATE_RISK</b> Contains information about interest rate risk, with each row having the primary key <b>ACCESSION_NUMBER</b> and <b>INTEREST_RATE_RISK_ID</b>.</p><p style="margin-left: 40px"> 5. <b>BORROWER</b> Information for each borrower in a securities lending transaction, with each row having the primary key <b>ACCESSION_NUMBER</b> and <b>BORROWER_ID</b>.</p><p style="margin-left: 40px"> 6. <b>BORROW_AGGREGATE</b> Information for each category of non-cash collateral received for loaned securities, with each row having the primary key <b>ACCESSION_NUMBER</b> and <b>BORROW_AGGREGATE_ID</b>.</p><p style="margin-left: 40px"> 7. <b>MONTHLY_TOTAL_RETURN</b> Contains monthly total return information for each of the preceding three months, with each row having the primary key <b>ACCESSION_NUMBER</b> and <b>MONTHLY_TOTAL_RETURN_ID</b>.</p><p style="margin-left: 40px"> 8. <b>MONTHLY_RETURN_CAT_INSTRUMENT</b> Contains monthly return information attributable to derivatives for each of the preceding three months, with each row having the primary key <b>ACCESSION_NUMBER</b>, <b>ASSET_CAT</b> and <b>INSTRUMENT_KIND</b>.</p><p style="margin-left: 40px"> 9. <b>FUND_VAR_INFO</b> Provides the Fund's designated index, with each row having the primary key <b>ACCESSION_NUMBER</b>.</p><p style="margin-left: 40px"> 10. <b>FUND_REPORTED_HOLDING</b> Contains information about the holdings of the fund, with each row having the primary key <b>ACCESSION_NUMBER</b> and <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 11. <b>IDENTIFIERS</b> Contains other identifiers for the holding, with each row having the primary key <b>HOLDING_ID</b> and <b>IDENTIFIERS_ID</b>.</p><p style="margin-left: 40px"> 12. <b>DEBT_SECURITY</b> Additional information for debt securities holdings, without primary key.</p><p style="margin-left: 40px"> 13. <b>DEBT_SECURITY_REF_INSTRUMENT</b> The debt securities reference instrument for convertible securities, with each row having the primary key <b>HOLDING_ID</b> and <b>DEBT_SECURITY_REF_ID</b>.</p><p style="margin-left: 40px"> 14. <b>CONVERTIBLE_SECURITY_CURRENCY</b> The convertible securities conversion ratio per 1000 units of the relevant currency, with each row having the primary key <b>HOLDING_ID</b> and <b>CONVERTIBLE_SECURITY_ID</b>.</p><p style="margin-left: 40px"> 15. <b>REPURCHASE_AGREEMENT</b> Contains information for repurchase and reverse repurchase agreements, with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 16. <b>REPURCHASE_COUNTERPARTY</b> Provides the repurchase and reverse repurchase agreement counterparty, with each row having the primary key <b>HOLDING_ID</b> and <b>REPURCHASE_COUNTERPARTY_ID</b>.</p><p style="margin-left: 40px"> 17. <b>REPURCHASE_COLLATERAL</b> Contains information concerning securities subject to repurchase agreement, with each row having the primary key <b>HOLDING_ID</b> and <b>REPURCHASE_COLLATERAL_ID</b>.</p><p style="margin-left: 40px"> 18. <b>DERIVATIVE_COUNTERPARTY</b> Provides the derivative instrument counterparty, with each row having the primary key <b>HOLDING_ID</b> and <b>DERIVATIVE_COUNTERPARTY_ID</b>.</p><p style="margin-left: 40px"> 19. <b>SWAPTION_OPTION_WARNT_DERIV</b> Contains information about options and warrants, including options on a derivative (swaptions), with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 20. <b>DESC_REF_INDEX_BASKET</b> The index or custom basket reference instrument for options and warrants, including options on a derivative (swaptions), with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 21. <b>DESC_REF_INDEX_COMPONENT</b> The index or custom basket components, with each row having the primary key <b>HOLDING_ID</b> and <b>DESC_REF_INDEX_COMPONENT_ID</b>.</p><p style="margin-left: 40px"> 22. <b>DESC_REF_OTHER</b> Information for reference instrument that is not a derivative, index or custom basket, with each row having the primary key <b>HOLDING_ID</b> and <b>DESC_REF_OTHER_ID</b>.</p><p style="margin-left: 40px"> 23. <b>FUT_FWD_NONFOREIGNCUR_CONTRACT</b> Contains information for futures and forwards (other than foreign currency contracts), with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 24. <b>FWD_FOREIGNCUR_CONTRACT_SWAP</b> Contains information about forward foreign currency contracts and foreign currency swaps, with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 25. <b>NONFOREIGN_EXCHANGE_SWAP</b> Contains swap information (other than foreign exchange swaps), with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 26. <b>FLOATING_RATE_RESET_TENOR</b> For swaps, the terms of payments paid and received, with each row having the primary key <b>HOLDING_ID</b> and <b>RATE_RESET_TENOR_ID</b>.</p><p style="margin-left: 40px"> 27. <b>OTHER_DERIV</b> Contains information for other derivatives, with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 28. <b>OTHER_DERIV_NOTIONAL_AMOUNT</b> Contains notional amount(s) for other derivatives, with each row having the primary key <b>HOLDING_ID</b> and <b>OTHER_DERIV_NOTIONAL_AMOUNT_ID</b>.</p><p style="margin-left: 40px"> 29. <b>SECURITIES_LENDING</b> Contains information for securities lending, with each row having the primary key <b>HOLDING_ID</b>.</p><p style="margin-left: 40px"> 30. <b>EXPLANATORY_NOTE</b> Any information provided by the fund in response to an item, with each row having the primary key <b>ACCESSION_NUMBER</b> and <b>EXPLANATORY_NOTE_ID</b>.</p>
+<h2 id="File Format">4. File Format</h2>
+Each of the data file provide text format, tab delimited, UTF-8 encoding.
+<h2 id="Table Definitions">5. Table Definitions</h2>
+<p>The fields in the tables below provide the following information: field name, description, data format, maximum field size, an indication of whether or not the field may be NULL (yes or no), and key. The Key field indicates whether the field is part of a unique index on the data.  There are two possible values for this field:</p><ul><li> "*"   Indicates the field is part of the unique key for the row.</li> <li>Empty (nothing in field) means the field is not part of the unique compound key.</li></ul><h3 id="SUBMISSION (Items A.3-4)">5.1 SUBMISSION (Items A.3-4)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FILING_DATE</th>
+      <td>Filing date</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FILE_NUM</th>
+      <td>File number</td>
+      <td>VARCHAR2(30)</td>
+      <td>Y</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SUB_TYPE</th>
+      <td>NPORT-P, NPORT-P/A, NT NPORT-P</td>
+      <td>VARCHAR2(15)</td>
+      <td>Y</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REPORT_ENDING_PERIOD</th>
+      <td>Date of fiscal year-end</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.3.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REPORT_DATE</th>
+      <td>Date as of which information is reported</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.3.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_LAST_FILING</th>
+      <td>Does the Fund anticipate that this will be its final filing on Form N-PORT</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.4</td>
+    </tr>
+  </tbody>
+</table><h3 id="REGISTRANT (Item A.1)">5.2 REGISTRANT (Item A.1)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CIK</th>
+      <td>CIK number</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REGISTRANT_NAME</th>
+      <td>Name of Registrant</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FILE_NUM</th>
+      <td>Investment Company Act file number</td>
+      <td>VARCHAR2(30)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>LEI</th>
+      <td>LEI of Registrant</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ADDRESS1</th>
+      <td>Address line 1</td>
+      <td>VARCHAR2(40)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ADDRESS2</th>
+      <td>Address line 2</td>
+      <td>VARCHAR2(40)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CITY</th>
+      <td>City</td>
+      <td>VARCHAR2(30)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>STATE</th>
+      <td>State</td>
+      <td>VARCHAR2(5)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>COUNTRY</th>
+      <td>Country</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ZIP</th>
+      <td>Zip code</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PHONE</th>
+      <td>Phone</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.1.e</td>
+    </tr>
+  </tbody>
+</table><h3 id="FUND_REPORTED_INFO (Items A.2, B.1-B.6)">5.3 FUND_REPORTED_INFO (Items A.2, B.1-B.6)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SERIES_NAME</th>
+      <td>Name of Series</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.2.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SERIES_ID</th>
+      <td>EDGAR Series Identifier</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.2.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SERIES_LEI</th>
+      <td>LEI of Series.</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>A.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TOTAL_ASSETS</th>
+      <td>Total assets</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.1.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TOTAL_LIABILITIES</th>
+      <td>Total liabilities</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.1.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_ASSETS</th>
+      <td>Net assets</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.1.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ASSETS_ATTRBT_TO_MISC_SECURITY</th>
+      <td>Assets attributable to miscellaneous securities</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ASSETS_INVESTED</th>
+      <td>Assets invested in a Controlled Foreign Corporation</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>BORROWING_PAY_WITHIN_1YR</th>
+      <td>Amounts payable to banks or other financial institutions for borrowings within one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CTRLD_COMPANIES_PAY_WITHIN_1YR</th>
+      <td>Amounts payable to controlled companies within one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_AFFILIA_PAY_WITHIN_1YR</th>
+      <td>Amounts payable to other affiliates within one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_PAY_WITHIN_1YR</th>
+      <td>Amounts payable to others within one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>BORROWING_PAY_AFTER_1YR</th>
+      <td>Amounts payable to banks or other financial institutions for borrowings after one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CTRLD_COMPANIES_PAY_AFTER_1YR</th>
+      <td>Amounts payable to controlled companies after one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_AFFILIA_PAY_AFTER_1YR</th>
+      <td>Amounts payable to other affiliates after one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_PAY_AFTER_1YR</th>
+      <td>Amounts payable to others after one year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DELAYED_DELIVERY</th>
+      <td>Payables for investments purchased on a delayed delivery, when-issued, or other firm commitment basis</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>STANDBY_COMMITMENT</th>
+      <td>Payables for investments purchased on a standby commitment basis</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>LIQUIDATION_PREFERENCE</th>
+      <td>Liquidation preference of outstanding preferred stock issued by the Fund</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CASH_NOT_RPTD_IN_C_OR_D</th>
+      <td>Cash and cash equivalents not reported in Parts C or D</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.2.f</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_3MON_INVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by investment grade for 3 month maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_1YR_INVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by investment grade for 1 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_5YR_INVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by investment grade for 5 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_10YR_INVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by investment grade for 10 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_30YR_INVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by investment grade for 30 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_3MON_NONINVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by non investment grade for 3 month maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_1YR_NONINVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by non investment grade for 1 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_5YR_NONINVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by non investment grade for 5 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_10YR_NONINVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by non investment grade for 10 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CREDIT_SPREAD_30YR_NONINVEST</th>
+      <td>The change in value of the portfolio resulting from a 1 basis point change in credit spreads where the shift is applied to the option adjusted spread, aggregated by non investment grade for 30 year maturity</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_NON_CASH_COLLATERAL</th>
+      <td>Did any securities lending counterparty provide any non-cash collateral</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_REALIZE_GAIN_NONDERIV_MON1</th>
+      <td>First month net realized gain (loss) attributable to investments other than derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_UNREALIZE_AP_NONDERIV_MON1</th>
+      <td>First month net change in unrealized appreciation (or depreciation) attributable to investments other than derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_REALIZE_GAIN_NONDERIV_MON2</th>
+      <td>Second month net realized gain (loss) attributable to investments other than derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_UNREALIZE_AP_NONDERIV_MON2</th>
+      <td>Second month net change in unrealized appreciation (or depreciation) attributable to investments other than derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_REALIZE_GAIN_NONDERIV_MON3</th>
+      <td>Third month net realized gain (loss) attributable to investments other than derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_UNREALIZE_AP_NONDERIV_MON3</th>
+      <td>Third month net change in unrealized appreciation (or depreciation) attributable to investments other than derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SALES_FLOW_MON1</th>
+      <td>First Month Total net asset value of shares sold</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REINVESTMENT_FLOW_MON1</th>
+      <td>First Month Total net asset value of shares sold in connection with reinvestments of dividends and distributions</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REDEMPTION_FLOW_MON1</th>
+      <td>First Month Total net asset value of shares redeemed or repurchased, including exchanges</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SALES_FLOW_MON2</th>
+      <td>Second Month Total net asset value of shares sold</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REINVESTMENT_FLOW_MON2</th>
+      <td>Second Month Total net asset value of shares sold in connection with reinvestments of dividends and distributions</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REDEMPTION_FLOW_MON2</th>
+      <td>Second Month Total net asset value of shares redeemed or repurchased, including exchanges</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SALES_FLOW_MON3</th>
+      <td>Third Month Total net asset value of shares sold</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REINVESTMENT_FLOW_MON3</th>
+      <td>Third Month Total net asset value of shares sold in connection with reinvestments of dividends and distributions</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REDEMPTION_FLOW_MON3</th>
+      <td>Third Month Total net asset value of shares redeemed or repurchased, including exchanges</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.6.c</td>
+    </tr>
+  </tbody>
+</table><h3 id="INTEREST_RATE_RISK (Item B.3.a-b)">5.4 INTEREST_RATE_RISK (Item B.3.a-b)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTEREST_RATE_RISK_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>N</td>
+      <td></td>
+      <td>B.3.a,B.3.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_3MON_DV01</th>
+      <td>Change in value of the portfolio resulting from a 1 basis point change in interest rates for maturity in 3 months</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_1YR_DV01</th>
+      <td>Change in value of the portfolio resulting from a 1 basis point change in interest rates for maturity in 1 year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_5YR_DV01</th>
+      <td>Change in value of the portfolio resulting from a 1 basis point change in interest rates for maturity in 5 years</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_10YR_DV01</th>
+      <td>Change in value of the portfolio resulting from a 1 basis point change in interest rates for maturity in 10 years</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_30YR_DV01</th>
+      <td>Change in value of the portfolio resulting from a 1 basis point change in interest rates for maturity in 30 years</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_3MON_DV100</th>
+      <td>Change in value of the portfolio resulting from a 100 basis point change in interest rates for maturity in 3 months</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_1YR_DV100</th>
+      <td>Change in value of the portfolio resulting from a 100 basis point change in interest rates for maturity in 1 year</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_5YR_DV100</th>
+      <td>Change in value of the portfolio resulting from a 100 basis point change in interest rates for maturity in 5 years</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_10YR_DV100</th>
+      <td>Change in value of the portfolio resulting from a 100 basis point change in interest rates for maturity in 10 years</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INTRST_RATE_CHANGE_30YR_DV100</th>
+      <td>Change in value of the portfolio resulting from a 100 basis point change in interest rates for maturity in 30 years</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.3.b</td>
+    </tr>
+  </tbody>
+</table><h3 id="BORROWER (Item B.4.a)">5.5 BORROWER (Item B.4.a)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>BORROWER_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NAME</th>
+      <td>Name of borrower</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.a.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>LEI</th>
+      <td>LEI (if any) of borrower.</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.a.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>AGGREGATE_VALUE</th>
+      <td>Aggregate value of all securities on loan to the borrower.</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.a.iii</td>
+    </tr>
+  </tbody>
+</table><h3 id="BORROW_AGGREGATE (Item B.4.b)">5.6 BORROW_AGGREGATE (Item B.4.b)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>BORROW_AGGREGATE_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>AMOUNT</th>
+      <td>Aggregate principal amount</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.b.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>COLLATERAL</th>
+      <td>Aggregate value of collateral</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.b.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INVESTMENT_CAT</th>
+      <td>Category of investments</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.b.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_DESC</th>
+      <td>Brief description if category of investment is Other Instrument</td>
+      <td>CLOB</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.4.b.iii</td>
+    </tr>
+  </tbody>
+</table><h3 id="MONTHLY_TOTAL_RETURN (Items B.5.a-b)">5.7 MONTHLY_TOTAL_RETURN (Items B.5.a-b)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>MONTHLY_TOTAL_RETURN_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CLASS_ID</th>
+      <td>Class identification number(s) (if any) of the Class(es) for which returns are reported.</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>MONTHLY_TOTAL_RETURN1</th>
+      <td>First Month total returns of the Fund</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>MONTHLY_TOTAL_RETURN2</th>
+      <td>Second Month total returns of the Fund</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>MONTHLY_TOTAL_RETURN3</th>
+      <td>Third Month total returns of the Fund</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.a</td>
+    </tr>
+  </tbody>
+</table><h3 id="MONTHLY_RETURN_CAT_INSTRUMENT (Item B.5.c)">5.8 MONTHLY_RETURN_CAT_INSTRUMENT (Item B.5.c)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ASSET_CAT</th>
+      <td>Asset category</td>
+      <td>VARCHAR2(30)</td>
+      <td>Y</td>
+      <td>*</td>
+      <td>B.5.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INSTRUMENT_KIND</th>
+      <td>From each asset category further breakdown by derivatives instrument: forward, future, option, swaption, swap, warrant, and other</td>
+      <td>VARCHAR2(30)</td>
+      <td>Y</td>
+      <td>*</td>
+      <td>B.5.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_REALIZED_GAIN_MON1</th>
+      <td>First month net realized gain (loss) attributable to derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_UNREALIZED_AP_MON1</th>
+      <td>First month net change in unrealized appreciation (or depreciation) attributable to derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_REALIZED_GAIN_MON2</th>
+      <td>Second month net realized gain (loss) attributable to derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_UNREALIZED_AP_MON2</th>
+      <td>Second month net change in unrealized appreciation (or depreciation) attributable to derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_REALIZED_GAIN_MON3</th>
+      <td>Third month net realized gain (loss) attributable to derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NET_UNREALIZED_AP_MON3</th>
+      <td>Third month net change in unrealized appreciation (or depreciation) attributable to derivatives</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.5.c</td>
+    </tr>
+  </tbody>
+</table><h3 id="FUND_VAR_INFO (Item B.10.b)">5.9 FUND_VAR_INFO (Item B.10.b)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DESIGNATED_INDEX_NAME</th>
+      <td>For Funds subject to Relative VaR Test during the period, the name of the Fund's Designated Index, or a statement that the Fund's Designated Reference Portfolio is the Fund's Securities Portfolio</td>
+      <td>VARCHAR2(250)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.10.b.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DESIGNATED_INDEX_IDENTIFIER</th>
+      <td>The index identifier for the Fund's Designated Index.</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>B.10.b.ii</td>
+    </tr>
+  </tbody>
+</table><h3 id="FUND_REPORTED_HOLDING (Items C.1 - C.8, C.11)">5.10 FUND_REPORTED_HOLDING (Items C.1 - C.8, C.11)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_NAME</th>
+      <td>Name of issuer</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_LEI</th>
+      <td>LEI (if any) of issuer. In the case of a holding in a fund that is a series of a series trust, report the LEI of the series</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_TITLE</th>
+      <td>Title of the issue or description of the investment.</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_CUSIP</th>
+      <td>CUSIP</td>
+      <td>VARCHAR2(9)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>BALANCE</th>
+      <td>Balance</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.2.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UNIT</th>
+      <td>Indicate whether balance amount is expressed in number of shares, principal amount, or other units</td>
+      <td>VARCHAR2(5)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.2.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_UNIT_DESC</th>
+      <td>Other units description</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.2.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.2.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_VALUE</th>
+      <td>Value</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>EXCHANGE_RATE</th>
+      <td>Exchange rate</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.2.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PERCENTAGE</th>
+      <td>Percentage value compared to net assets of the Fund</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.2.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PAYOFF_PROFILE</th>
+      <td>Payoff profile -- long, short, N/A</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.3</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ASSET_CAT</th>
+      <td>Asset type</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.4.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_ASSET</th>
+      <td>If Asset type is Other, provide a brief description.</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.4.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_TYPE</th>
+      <td>Issuer type</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.4.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_ISSUER</th>
+      <td>If Issuer type is Other, provide a brief description.</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.4.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INVESTMENT_COUNTRY</th>
+      <td>Report the ISO country code that corresponds to the country where the issuer is organized</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.5.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_RESTRICTED_SECURITY</th>
+      <td>Is the investment a Restricted Security</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.6</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FAIR_VALUE_LEVEL</th>
+      <td>The level within the fair value hierarchy in which the fair value measurements fall pursuant  to US GAAP</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.8</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DERIVATIVE_CAT</th>
+      <td>Type of derivative instrument</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.a</td>
+    </tr>
+  </tbody>
+</table><h3 id="IDENTIFIERS (Item C.1.e)">5.11 IDENTIFIERS (Item C.1.e)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IDENTIFIERS_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IDENTIFIER_ISIN</th>
+      <td>ISIN</td>
+      <td>VARCHAR2(12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.e.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IDENTIFIER_TICKER</th>
+      <td>Ticker</td>
+      <td>VARCHAR2(50)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.e.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_IDENTIFIER</th>
+      <td>Other identifier</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.e.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_IDENTIFIER_DESC</th>
+      <td>Other identifier type used</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.1.e.iii</td>
+    </tr>
+  </tbody>
+</table><h3 id="DEBT_SECURITY (Item C.9)">5.12 DEBT_SECURITY (Item C.9)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>MATURITY_DATE</th>
+      <td>Maturity date</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>COUPON_TYPE</th>
+      <td>The category that most closely reflects the coupon type among the following: fixed, floating, variable, none.</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.b.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ANNUALIZED_RATE</th>
+      <td>Annualized rate.</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.b.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_DEFAULT</th>
+      <td>Currently in default</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ARE_ANY_INTEREST_PAYMENT</th>
+      <td>Are there any interest payments in arrears or have any coupon payments been legally deferred by the issuer</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_ANY_PORTION_INTEREST_PAID</th>
+      <td>Is any portion of the interest paid in kind?</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.e</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_CONVTIBLE_MANDATORY</th>
+      <td>Is it Mandatory convertible</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_CONVTIBLE_CONTINGENT</th>
+      <td>Is it Contingent convertible</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.ii</td>
+    </tr>
+  </tbody>
+</table><h3 id="DEBT_SECURITY_REF_INSTRUMENT (Item C.9.f.iii)">5.13 DEBT_SECURITY_REF_INSTRUMENT (Item C.9.f.iii)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DEBT_SECURITY_REF_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_NAME</th>
+      <td>Name of issuer</td>
+      <td>VARCHAR2(150)</td>
+      <td>N</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUE_TITLE</th>
+      <td>Title of issue</td>
+      <td>VARCHAR2(150)</td>
+      <td>N</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>N</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CUSIP</th>
+      <td>CUSIP of reference instrument</td>
+      <td>VARCHAR2(9)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISIN</th>
+      <td>ISIN</td>
+      <td>VARCHAR2(12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TICKER</th>
+      <td>Ticker</td>
+      <td>VARCHAR2(50)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_IDENTIFIER</th>
+      <td>Other identifier</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_DESC</th>
+      <td>Type of identifier if 'other' identifier provided</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.iii</td>
+    </tr>
+  </tbody>
+</table><h3 id="CONVERTIBLE_SECURITY_CURRENCY (Item C.9.f.iv)">5.14 CONVERTIBLE_SECURITY_CURRENCY (Item C.9.f.iv)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CONVERTIBLE_SECURITY_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CONVERSION_RATIO</th>
+      <td>Conversion ratio</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.9.f.iv</td>
+    </tr>
+  </tbody>
+</table><h3 id="REPURCHASE_AGREEMENT (Item C.10.a-e)">5.15 REPURCHASE_AGREEMENT (Item C.10.a-e)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TRANSACTION_TYPE</th>
+      <td>Category that most closely reflects the transaction (repurchase, reverse repurchase)</td>
+      <td>VARCHAR2(30)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_CLEARED</th>
+      <td>Cleared by central counterparty</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.b.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CENTRAL_COUNTER_PARTY</th>
+      <td>Name of the central counterparty</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.b.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_TRIPARTY</th>
+      <td>Tri-party</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REPURCHASE_RATE</th>
+      <td>Repurchase rate</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.d</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>MATURITY_DATE</th>
+      <td>Maturity date</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.e</td>
+    </tr>
+  </tbody>
+</table><h3 id="REPURCHASE_COUNTERPARTY (Item C.10.b.ii)">5.16 REPURCHASE_COUNTERPARTY (Item C.10.b.ii)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REPURCHASE_COUNTERPARTY_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NAME</th>
+      <td>Name of counterparty</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.b.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>LEI</th>
+      <td>LEI (if any) of counterparty</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.b.ii</td>
+    </tr>
+  </tbody>
+</table><h3 id="REPURCHASE_COLLATERAL (Item C.10.f)">5.17 REPURCHASE_COLLATERAL (Item C.10.f)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>REPURCHASE_COLLATERAL_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PRINCIPAL_AMOUNT</th>
+      <td>Principal amount</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.f.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PRINCIPAL_CURRENCY_CODE</th>
+      <td>Principal currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.f.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>COLLATERAL_AMOUNT</th>
+      <td>Value of collateral</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.f.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>COLLATERAL_CURRENCY_CODE</th>
+      <td>Collateral currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.f.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INVESTMENT_CAT</th>
+      <td>Category of investments that most closely represents the collateral</td>
+      <td>VARCHAR2(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_INTRUMENT_DESC</th>
+      <td>Brief description if category of investment is Other Instrument</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.10.f.iii</td>
+    </tr>
+  </tbody>
+</table><h3 id="DERIVATIVE_COUNTERPARTY (Item C.11.b.i)">5.18 DERIVATIVE_COUNTERPARTY (Item C.11.b.i)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DERIVATIVE_COUNTERPARTY_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DERIVATIVE_COUNTERPARTY_NAME</th>
+      <td>Name of counterparty</td>
+      <td>CHAR(200)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.b.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DERIVATIVE_COUNTERPARTY_LEI</th>
+      <td>LEI (if any) of counterparty</td>
+      <td>CHAR(20)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.b.i</td>
+    </tr>
+  </tbody>
+</table><h3 id="SWAPTION_OPTION_WARNT_DERIV (Item C.11.c.i-ii, iv-vi, viii)">5.19 SWAPTION_OPTION_WARNT_DERIV (Item C.11.c.i-ii, iv-vi, viii)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PUT_OR_CALL</th>
+      <td>Type, selected from among the following (put, call). Respond call for warrants</td>
+      <td>VARCHAR2(5)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>WRITTEN_OR_PURCHASED</th>
+      <td>Payoff profile, selected from among the following (written, purchased). Respond purchased for warrants</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SHARES_CNT</th>
+      <td>Number of shares of underlying reference instrument per contract</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PRINCIPAL_AMOUNT</th>
+      <td>Principal amount of underlying reference instrument per contract</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>EXERCISE_PRICE</th>
+      <td>Exercise price or rate</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.v</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>EXPIRATION_DATE</th>
+      <td>Expiration date.</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.vi</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UNREALIZED_APPRECIATION</th>
+      <td>Unrealized appreciation or depreciation. Depreciation shall be reported as a negative number</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.viii</td>
+    </tr>
+  </tbody>
+</table><h3 id="DESC_REF_INDEX_BASKET (Item C.11.c.iii.2)">5.20 DESC_REF_INDEX_BASKET (Item C.11.c.iii.2)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INDEX_NAME</th>
+      <td>Index Name</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>INDEX_IDENTIFIER</th>
+      <td>Index Identifier</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NARRATIVE_DESC</th>
+      <td>Narrative Description</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+  </tbody>
+</table><h3 id="DESC_REF_INDEX_COMPONENT (Item C.11.c.iii.2)">5.21 DESC_REF_INDEX_COMPONENT (Item C.11.c.iii.2)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DESC_REF_INDEX_COMPONENT_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NAME</th>
+      <td>Name of component</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CUSIP</th>
+      <td>CUSIP</td>
+      <td>VARCHAR2(9)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISIN</th>
+      <td>ISIN</td>
+      <td>VARCHAR2(12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TICKER</th>
+      <td>Ticker</td>
+      <td>VARCHAR2(50)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_IDENTIFIER</th>
+      <td>Other identifier</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_DESC</th>
+      <td>Other identifier type used</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NOTIONAL_AMOUNT</th>
+      <td>Notional amount</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>VALUE</th>
+      <td>Value</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_CURRENCY_CODE</th>
+      <td>Currency code of issuer</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.2</td>
+    </tr>
+  </tbody>
+</table><h3 id="DESC_REF_OTHER (Item C.11.c.iii.3)">5.22 DESC_REF_OTHER (Item C.11.c.iii.3)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DESC_REF_OTHER_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUER_NAME</th>
+      <td>Issuer name</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.3</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISSUE_TITLE</th>
+      <td>Issuer title</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.3</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CUSIP</th>
+      <td>CUSIP</td>
+      <td>VARCHAR2(9)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.3</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ISIN</th>
+      <td>ISIN</td>
+      <td>VARCHAR2(12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.3</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TICKER</th>
+      <td>Ticker</td>
+      <td>VARCHAR2(50)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.3</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_IDENTIFIER</th>
+      <td>Other identifier</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.3</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_DESC</th>
+      <td>Other identifier type used</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.c.iii.3</td>
+    </tr>
+  </tbody>
+</table><h3 id="FUT_FWD_NONFOREIGNCUR_CONTRACT (Item C.11.d)">5.23 FUT_FWD_NONFOREIGNCUR_CONTRACT (Item C.11.d)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PAYOFF_PROFILE</th>
+      <td>Payoff profile, selected from among the following (long, short).</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.d.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>EXPIRATION_DATE</th>
+      <td>Expiration date.</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.d.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NOTIONAL_AMOUNT</th>
+      <td>Aggregate notional amount or contract value on trade date</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.d.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.d.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UNREALIZED_APPRECIATION</th>
+      <td>Unrealized appreciation or depreciation. Depreciation shall be reported as a negative number.</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.d.v</td>
+    </tr>
+  </tbody>
+</table><h3 id="FWD_FOREIGNCUR_CONTRACT_SWAP (Item C.11.e)">5.24 FWD_FOREIGNCUR_CONTRACT_SWAP (Item C.11.e)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_SOLD_AMOUNT</th>
+      <td>Amount of currency sold</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.e.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DESC_CURRENCY_SOLD</th>
+      <td>Description of currency sold</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.e.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_PURCHASED_AMOUNT</th>
+      <td>Amount of currency purchased.</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.e.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>DESC_CURRENCY_PURCHASED</th>
+      <td>Description of currency purchased.</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.e.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SETTLEMENT_DATE</th>
+      <td>Settlement date</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.e.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UNREALIZED_APPRECIATION</th>
+      <td>Unrealized appreciation or depreciation. Depreciation shall be reported as a negative number</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.e.iv</td>
+    </tr>
+  </tbody>
+</table><h3 id="NONFOREIGN_EXCHANGE_SWAP (Item C.11.f)">5.25 NONFOREIGN_EXCHANGE_SWAP (Item C.11.f)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>SWAP_FLAG</th>
+      <td>Custom swap flag</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TERMINATION_DATE</th>
+      <td>Termination or maturity date</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UPFRONT_PAYMENT</th>
+      <td>Upfront payments</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>PMNT_CURRENCY_CODE</th>
+      <td>Payment currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UPFRONT_RECEIPT</th>
+      <td>Upfront receipts</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>RCPT_CURRENCY_CODE</th>
+      <td>Receipts currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NOTIONAL_AMOUNT</th>
+      <td>Notional amount</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.iv</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UNREALIZED_APPRECIATION</th>
+      <td>Unrealized appreciation or depreciation. Depreciation shall be reported as a negative number.</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.v</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FIXED_OR_FLOATING_RECEIPT</th>
+      <td>Fixed, floating, or other receipt</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.1</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FIXED_RATE_RECEIPT</th>
+      <td>Receipt: fixed rate</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.1</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FLOATING_RATE_INDEX_RECEIPT</th>
+      <td>Receipt: floating rate index</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.1</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FLOATING_RATE_SPREAD_RECEIPT</th>
+      <td>Receipt: floating rate spread</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.1</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE_RECEIPT</th>
+      <td>Receipt: currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.1</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>AMOUNT_RECEIPT</th>
+      <td>Receipt: amount</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.1</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FIXED_OR_FLOATING_PAYMENT</th>
+      <td>Fixed, floating, or other payment</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FIXED_RATE_PAYMENT</th>
+      <td>Payment: fixed rate</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FLOATING_RATE_INDEX_PAYMENT</th>
+      <td>Payment: floating rate index</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>FLOATING_RATE_SPREAD_PAYMENT</th>
+      <td>Payment: floating rate spread</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE_PAYMENT</th>
+      <td>Payment: currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.2</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>AMOUNT_PAYMENT</th>
+      <td>Payment: amount</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i.2</td>
+    </tr>
+  </tbody>
+</table><h3 id="FLOATING_RATE_RESET_TENOR (Item C.11.f.i)">5.26 FLOATING_RATE_RESET_TENOR (Item C.11.f.i)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>RATE_RESET_TENOR_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>RECEIPT_OR_PAYMENT</th>
+      <td>Receipt or payment</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>RESET_DATE</th>
+      <td>Rate reset date</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>RESET_DATE_UNIT</th>
+      <td>Rate reset unit</td>
+      <td>NUMBER(5)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>RATE_TENOR</th>
+      <td>Rate tenor</td>
+      <td>VARCHAR2(10)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>RATE_TENOR_UNIT</th>
+      <td>Rate tenor unit</td>
+      <td>NUMBER(5)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.f.i</td>
+    </tr>
+  </tbody>
+</table><h3 id="OTHER_DERIV (Item C.11.g)">5.27 OTHER_DERIV (Item C.11.g)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_DESC</th>
+      <td>Other description</td>
+      <td>VARCHAR2(150)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.g.i</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>TERMINATION_DATE</th>
+      <td>Termination date or maturity date</td>
+      <td>DATE</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.g.ii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>UNREALIZED_APPRECIATION</th>
+      <td>Unrealized appreciation or depreciation</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.g.v</td>
+    </tr>
+  </tbody>
+</table><h3 id="OTHER_DERIV_NOTIONAL_AMOUNT (Item C.11.g.iii)">5.28 OTHER_DERIV_NOTIONAL_AMOUNT (Item C.11.g.iii)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>OTHER_DERIV_NOTIONAL_AMOUNT_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NOTIONAL_AMOUNT</th>
+      <td>Notional amount</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.g.iii</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CURRENCY_CODE</th>
+      <td>Currency code</td>
+      <td>VARCHAR2(3)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.11.g.iii</td>
+    </tr>
+  </tbody>
+</table><h3 id="SECURITIES_LENDING (Item C.12)">5.29 SECURITIES_LENDING (Item C.12)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>HOLDING_ID</th>
+      <td>Key for each holding in the schedule of portfolio investments</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_CASH_COLLATERAL</th>
+      <td>Does any amount of this investment represent reinvestment of cash collateral received for loaned securities</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.12.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>CASH_COLLATERAL_AMOUNT</th>
+      <td>Provide the value of the investment representing cash collateral</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.12.a</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_NON_CASH_COLLATERAL</th>
+      <td>Does any portion of this investment represent non-cash collateral that is treated as a Fund asset and received for loaned securities</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.12.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>NON_CASH_COLLATERAL_VALUE</th>
+      <td>Provide the value of the securities representing non-cash collateral</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.12.b</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>IS_LOAN_BY_FUND</th>
+      <td>Is any portion of this investment on loan by the Fund</td>
+      <td>CHAR(1)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.12.c</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>LOAN_VALUE</th>
+      <td>Provide the value of the securities on loan</td>
+      <td>NUMBER(36,12)</td>
+      <td>Y</td>
+      <td></td>
+      <td>C.12.c</td>
+    </tr>
+  </tbody>
+</table><h3 id="EXPLANATORY_NOTE (Item E)">5.30 EXPLANATORY_NOTE (Item E)</h3><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Field Name</th>
+      <th>Description</th>
+      <th>Data Type</th>
+      <th>Nullable</th>
+      <th>Key</th>
+      <th>Item In Rule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: left;">
+      <th>ACCESSION_NUMBER</th>
+      <td>The 20-character string formed from the 18-digit number assigned by the Commission to each EDGAR submission.</td>
+      <td>VARCHAR2(20)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>EXPLANATORY_NOTE_ID</th>
+      <td>Surrogate Key</td>
+      <td>NUMBER(38)</td>
+      <td>N</td>
+      <td>*</td>
+      <td></td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>ITEM_NO</th>
+      <td>Item number</td>
+      <td>VARCHAR2(15)</td>
+      <td>Y</td>
+      <td></td>
+      <td>E</td>
+    </tr>
+    <tr style="text-align: left;">
+      <th>EXPLANATORY_NOTE</th>
+      <td>Explanatory note</td>
+      <td>CLOB</td>
+      <td>Y</td>
+      <td></td>
+      <td>E</td>
+    </tr>
+  </tbody>
+</table>
+
+</html>

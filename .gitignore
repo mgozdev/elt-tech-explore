@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data files (keep structure, ignore large data)
+# Uncomment these if you don't want to commit large datasets
+# *.tsv
+# *.csv
+# *.parquet
+# *.delta
+# *.json.gz
+# *.tar.gz
+# *.zip
+
+# Lakehouse/Delta Lake
+_delta_log/
+*.checkpoint.parquet
+*.crc
+
+# Spark
+metastore_db/
+derby.log
+spark-warehouse/
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# Environment variables
+.env
+.env.local
+*.credentials
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS
+Thumbs.db
+
+# Benchmark results (optional - you may want to commit these)
+# benchmarks/results/*.json
+# benchmarks/results/*.csv
+
+# Downloaded/extracted datasets (keep originals in data/)
+data/raw/
+data/temp/
+data/staging/
+data/processed/
+
+# Config files with secrets
+*secret*.yaml
+*secret*.json
+*credentials*.json
