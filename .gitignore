@@ -84,3 +84,9 @@ data/processed/
 *secret*.yaml
 *secret*.json
 *credentials*.json
+
+# Python wheel files
+*.whl
+
+# Claude Code local settings (contains user-specific paths)
+.claude/settings.local.json

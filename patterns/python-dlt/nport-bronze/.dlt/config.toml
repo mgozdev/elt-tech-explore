@@ -1,0 +1,21 @@
+[runtime]
+log_level = "ERROR"  # Changed from WARNING to suppress benign partition hint warnings
+dlthub_telemetry = true
+
+[destination]
+active = "ducklake"
+
+[destination.duckdb]
+dataset = "nport_bronze"
+
+[destination.databricks]
+dataset = "nport_bronze"
+
+[destination.databricks.config]
+catalog = "main"
+
+[destination.ducklake]
+dataset = "nport_bronze"
+
+[destination.motherduck]
+dataset = "nport_bronze"
